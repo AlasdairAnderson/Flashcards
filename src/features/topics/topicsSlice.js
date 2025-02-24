@@ -8,13 +8,12 @@ export const topicsSlice = createSlice({
     reducers: {
         addTopic(state, action) {
             const { id, name, icon } = action.payload;
-            const topic = {
+            state.topics.push({id : {
                 id: id,
                 name: name,
                 icon: icon,
                 quizIds: []
-            }
-            state.topics.push(topic);
+            }});
         }
     },
     selectors: {
