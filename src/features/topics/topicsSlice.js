@@ -8,7 +8,7 @@ export const topicsSlice = createSlice({
     reducers: {
         addTopic(state, action) {
             const { id, name, icon } = action.payload;
-            state.topics.push({id : {
+            state.topics.push({ [id] : {
                 id: id,
                 name: name,
                 icon: icon,
