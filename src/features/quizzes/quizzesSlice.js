@@ -16,12 +16,9 @@ const quizzesSlice = createSlice({
                 cardIds: cardIds
             }
         }
-    },
-    selectors: {
-        selectQuizzes: (state)=> state.quizzes
     }
 })
 
 export const { addQuiz } = quizzesSlice.actions;
-export const { selectQuizzes } = quizzesSlice.getSelectors();
+export const selectQuizzes = (state) => state.quizzes.quizzes;
 export default  quizzesSlice.reducer; 
