@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const quizzesSlice = createSlice({
-    name: 'quizzesSlice',
+    name: 'quizzes',
     initialState: {
         quizzes: {}
     },
