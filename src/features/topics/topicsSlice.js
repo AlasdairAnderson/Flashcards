@@ -1,6 +1,5 @@
 import { createSlice, createAction } from "@reduxjs/toolkit";
-
-const addQuiz = createAction('addQuiz');
+import { addQuiz } from "../quizzes/quizzesSlice";
 
 const topicsSlice = createSlice({
     name: 'topics',
