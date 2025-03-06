@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSelector, createSlice } from '@reduxjs/toolkit';
 
 const cardsSlice = createSlice({
     name: 'cards',
@@ -18,5 +18,8 @@ const cardsSlice = createSlice({
 });
 
 export const { addCard } = cardsSlice.actions;
-export const selectCard = (state, id) => state.cards[id];
+export const selectCardById = (id) => (state) => {
+    const cards = state.cards.cards
+    return cards[id];
+}
 export default cardsSlice.reducer; 
